@@ -21,7 +21,7 @@ metadata:
         f:renewTime: {}
     manager: kubelet
     operation: Update
-    time: "2020-09-06T10:00:55Z"
+    time: "2020-09-06T10:01:05Z"
   name: ip-172-20-47-215.us-west-2.compute.internal
   namespace: kube-node-lease
   ownerReferences:
@@ -32,4 +32,4 @@ metadata:
 spec:
   holderIdentity: ip-172-20-47-215.us-west-2.compute.internal
   leaseDurationSeconds: 40
-  renewTime: "2020-09-06T10:00:55.000541Z"
+  renewTime: "2020-09-06T10:01:05.008005Z"
