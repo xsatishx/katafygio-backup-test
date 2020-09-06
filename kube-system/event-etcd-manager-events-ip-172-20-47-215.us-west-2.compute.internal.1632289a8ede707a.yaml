@@ -1,17 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:44:21Z"
+deprecatedLastTimestamp: "2020-09-06T09:44:21Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:44:21Z"
-involvedObject:
-  apiVersion: v1
-  fieldPath: spec.containers{etcd-manager}
-  kind: Pod
-  name: etcd-manager-events-ip-172-20-47-215.us-west-2.compute.internal
-  namespace: kube-system
-  uid: 2dacea89b75176b1c0d80ab9ab8277ee
 kind: Event
-lastTimestamp: "2020-09-06T09:44:21Z"
-message: Pulling image "kopeio/etcd-manager:3.0.20200531"
 metadata:
   creationTimestamp: "2020-09-06T09:45:41Z"
   managedFields:
@@ -39,10 +34,13 @@ metadata:
     time: "2020-09-06T09:45:41Z"
   name: etcd-manager-events-ip-172-20-47-215.us-west-2.compute.internal.1632289a8ede707a
   namespace: kube-system
+note: Pulling image "kopeio/etcd-manager:3.0.20200531"
 reason: Pulling
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{etcd-manager}
+  kind: Pod
+  name: etcd-manager-events-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: 2dacea89b75176b1c0d80ab9ab8277ee
 type: Normal

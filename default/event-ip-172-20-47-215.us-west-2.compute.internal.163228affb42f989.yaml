@@ -1,14 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:45:53Z"
+deprecatedLastTimestamp: "2020-09-06T09:45:53Z"
+deprecatedSource:
+  component: kube-proxy
+  host: ip-172-20-47-215.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:45:53Z"
-involvedObject:
-  kind: Node
-  name: ip-172-20-47-215.us-west-2.compute.internal
-  uid: ip-172-20-47-215.us-west-2.compute.internal
 kind: Event
-lastTimestamp: "2020-09-06T09:45:53Z"
-message: Starting kube-proxy.
 metadata:
   creationTimestamp: "2020-09-06T09:45:53Z"
   managedFields:
@@ -33,10 +31,10 @@ metadata:
     time: "2020-09-06T09:45:53Z"
   name: ip-172-20-47-215.us-west-2.compute.internal.163228affb42f989
   namespace: default
+note: Starting kube-proxy.
 reason: Starting
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kube-proxy
-  host: ip-172-20-47-215.us-west-2.compute.internal
+regarding:
+  kind: Node
+  name: ip-172-20-47-215.us-west-2.compute.internal
+  uid: ip-172-20-47-215.us-west-2.compute.internal
 type: Normal

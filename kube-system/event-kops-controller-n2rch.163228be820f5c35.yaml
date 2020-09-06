@@ -1,18 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:46:56Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:56Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:46:56Z"
-involvedObject:
-  apiVersion: v1
-  fieldPath: spec.containers{kops-controller}
-  kind: Pod
-  name: kops-controller-n2rch
-  namespace: kube-system
-  resourceVersion: "473"
-  uid: 394e7992-ca86-4677-8f24-aed3626b1b88
 kind: Event
-lastTimestamp: "2020-09-06T09:46:56Z"
-message: Started container kops-controller
 metadata:
   creationTimestamp: "2020-09-06T09:46:56Z"
   managedFields:
@@ -41,10 +35,14 @@ metadata:
     time: "2020-09-06T09:46:56Z"
   name: kops-controller-n2rch.163228be820f5c35
   namespace: kube-system
+note: Started container kops-controller
 reason: Started
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kops-controller}
+  kind: Pod
+  name: kops-controller-n2rch
+  namespace: kube-system
+  resourceVersion: "473"
+  uid: 394e7992-ca86-4677-8f24-aed3626b1b88
 type: Normal

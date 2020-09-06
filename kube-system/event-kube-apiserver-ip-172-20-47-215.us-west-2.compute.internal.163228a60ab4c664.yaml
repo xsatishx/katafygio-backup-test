@@ -1,17 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:45:11Z"
+deprecatedLastTimestamp: "2020-09-06T09:45:11Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:45:11Z"
-involvedObject:
-  apiVersion: v1
-  fieldPath: spec.containers{healthcheck}
-  kind: Pod
-  name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal
-  namespace: kube-system
-  uid: da83f2d287b6c7dfced3597d1bf3e983
 kind: Event
-lastTimestamp: "2020-09-06T09:45:11Z"
-message: Successfully pulled image "kope/kube-apiserver-healthcheck:1.18.0"
 metadata:
   creationTimestamp: "2020-09-06T09:45:45Z"
   managedFields:
@@ -39,10 +34,13 @@ metadata:
     time: "2020-09-06T09:45:45Z"
   name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal.163228a60ab4c664
   namespace: kube-system
+note: Successfully pulled image "kope/kube-apiserver-healthcheck:1.18.0"
 reason: Pulled
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{healthcheck}
+  kind: Pod
+  name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: da83f2d287b6c7dfced3597d1bf3e983
 type: Normal

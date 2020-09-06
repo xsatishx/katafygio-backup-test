@@ -1,17 +1,11 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
+deprecatedLastTimestamp: "2020-09-06T09:45:52Z"
+deprecatedSource:
+  component: deployment-controller
 eventTime: null
-firstTimestamp: "2020-09-06T09:45:52Z"
-involvedObject:
-  apiVersion: apps/v1
-  kind: Deployment
-  name: kube-dns-autoscaler
-  namespace: kube-system
-  resourceVersion: "157"
-  uid: 0721d30d-0144-44cc-9781-de1cf548b41e
 kind: Event
-lastTimestamp: "2020-09-06T09:45:52Z"
-message: Scaled up replica set kube-dns-autoscaler-cd7778b7b to 1
 metadata:
   creationTimestamp: "2020-09-06T09:45:52Z"
   managedFields:
@@ -38,9 +32,13 @@ metadata:
     time: "2020-09-06T09:45:52Z"
   name: kube-dns-autoscaler.163228afb715cb70
   namespace: kube-system
+note: Scaled up replica set kube-dns-autoscaler-cd7778b7b to 1
 reason: ScalingReplicaSet
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: deployment-controller
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-dns-autoscaler
+  namespace: kube-system
+  resourceVersion: "157"
+  uid: 0721d30d-0144-44cc-9781-de1cf548b41e
 type: Normal

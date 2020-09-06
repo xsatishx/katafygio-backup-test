@@ -1,17 +1,11 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:45:35Z"
+deprecatedLastTimestamp: "2020-09-06T09:45:35Z"
+deprecatedSource:
+  component: kube-controller-manager
 eventTime: null
-firstTimestamp: "2020-09-06T09:45:35Z"
-involvedObject:
-  apiVersion: coordination.k8s.io/v1
-  kind: Lease
-  name: kube-controller-manager
-  namespace: kube-system
-  resourceVersion: "172"
-  uid: dfdfc852-5f0c-42be-9879-85e0661e22fa
 kind: Event
-lastTimestamp: "2020-09-06T09:45:35Z"
-message: ip-172-20-47-215_37dc3efb-5c16-4403-af41-313b050a250c became leader
 metadata:
   creationTimestamp: "2020-09-06T09:45:35Z"
   managedFields:
@@ -38,9 +32,13 @@ metadata:
     time: "2020-09-06T09:45:35Z"
   name: kube-controller-manager.163228ab951a3ae4
   namespace: kube-system
+note: ip-172-20-47-215_37dc3efb-5c16-4403-af41-313b050a250c became leader
 reason: LeaderElection
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kube-controller-manager
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: kube-controller-manager
+  namespace: kube-system
+  resourceVersion: "172"
+  uid: dfdfc852-5f0c-42be-9879-85e0661e22fa
 type: Normal

@@ -1,17 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:44:25Z"
+deprecatedLastTimestamp: "2020-09-06T09:44:25Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:44:25Z"
-involvedObject:
-  apiVersion: v1
-  fieldPath: spec.containers{kube-controller-manager}
-  kind: Pod
-  name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal
-  namespace: kube-system
-  uid: 01f50fdc5ee710649fde27e174d8c34a
 kind: Event
-lastTimestamp: "2020-09-06T09:44:25Z"
-message: Successfully pulled image "k8s.gcr.io/kube-controller-manager:v1.18.8"
 metadata:
   creationTimestamp: "2020-09-06T09:45:41Z"
   managedFields:
@@ -39,10 +34,13 @@ metadata:
     time: "2020-09-06T09:45:41Z"
   name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal.1632289b700b7336
   namespace: kube-system
+note: Successfully pulled image "k8s.gcr.io/kube-controller-manager:v1.18.8"
 reason: Pulled
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: 01f50fdc5ee710649fde27e174d8c34a
 type: Normal

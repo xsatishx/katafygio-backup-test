@@ -1,17 +1,11 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:46:37Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:37Z"
+deprecatedSource:
+  component: default-scheduler
 eventTime: null
-firstTimestamp: "2020-09-06T09:46:37Z"
-involvedObject:
-  apiVersion: v1
-  kind: Pod
-  name: dns-controller-d9f76dc88-ng4kx
-  namespace: kube-system
-  resourceVersion: "359"
-  uid: bf7cda26-3711-4d9a-8483-ac67a4d61305
 kind: Event
-lastTimestamp: "2020-09-06T09:46:37Z"
-message: Successfully assigned kube-system/dns-controller-d9f76dc88-ng4kx to ip-172-20-47-215.us-west-2.compute.internal
 metadata:
   creationTimestamp: "2020-09-06T09:46:37Z"
   managedFields:
@@ -38,9 +32,13 @@ metadata:
     time: "2020-09-06T09:46:37Z"
   name: dns-controller-d9f76dc88-ng4kx.163228ba17ad250a
   namespace: kube-system
+note: Successfully assigned kube-system/dns-controller-d9f76dc88-ng4kx to ip-172-20-47-215.us-west-2.compute.internal
 reason: Scheduled
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: default-scheduler
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: dns-controller-d9f76dc88-ng4kx
+  namespace: kube-system
+  resourceVersion: "359"
+  uid: bf7cda26-3711-4d9a-8483-ac67a4d61305
 type: Normal

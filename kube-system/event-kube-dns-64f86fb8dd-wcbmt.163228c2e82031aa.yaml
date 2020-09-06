@@ -1,18 +1,11 @@
-apiVersion: v1
-count: 3
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 3
+deprecatedFirstTimestamp: "2020-09-06T09:47:15Z"
+deprecatedLastTimestamp: "2020-09-06T09:47:28Z"
+deprecatedSource:
+  component: default-scheduler
 eventTime: null
-firstTimestamp: "2020-09-06T09:47:15Z"
-involvedObject:
-  apiVersion: v1
-  kind: Pod
-  name: kube-dns-64f86fb8dd-wcbmt
-  namespace: kube-system
-  resourceVersion: "564"
-  uid: 71924c65-3efc-4a0c-b544-514cd1dbe8e8
 kind: Event
-lastTimestamp: "2020-09-06T09:47:28Z"
-message: '0/2 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready:
-  }, that the pod didn''t tolerate.'
 metadata:
   creationTimestamp: "2020-09-06T09:47:15Z"
   managedFields:
@@ -39,9 +32,14 @@ metadata:
     time: "2020-09-06T09:47:28Z"
   name: kube-dns-64f86fb8dd-wcbmt.163228c2e82031aa
   namespace: kube-system
+note: '0/2 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready:
+  }, that the pod didn''t tolerate.'
 reason: FailedScheduling
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: default-scheduler
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-dns-64f86fb8dd-wcbmt
+  namespace: kube-system
+  resourceVersion: "564"
+  uid: 71924c65-3efc-4a0c-b544-514cd1dbe8e8
 type: Warning

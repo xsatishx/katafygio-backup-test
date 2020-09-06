@@ -1,17 +1,11 @@
-apiVersion: v1
-count: 4
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 4
+deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:52Z"
+deprecatedSource:
+  component: controllermanager
 eventTime: null
-firstTimestamp: "2020-09-06T09:45:52Z"
-involvedObject:
-  apiVersion: policy/v1beta1
-  kind: PodDisruptionBudget
-  name: kube-dns
-  namespace: kube-system
-  resourceVersion: "164"
-  uid: 1b903a2c-c78e-4f55-98e0-3688daf11ce8
 kind: Event
-lastTimestamp: "2020-09-06T09:46:52Z"
-message: No matching pods found
 metadata:
   creationTimestamp: "2020-09-06T09:45:52Z"
   managedFields:
@@ -38,9 +32,13 @@ metadata:
     time: "2020-09-06T09:46:54Z"
   name: kube-dns.163228afb4aedf07
   namespace: kube-system
+note: No matching pods found
 reason: NoPods
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: controllermanager
+regarding:
+  apiVersion: policy/v1beta1
+  kind: PodDisruptionBudget
+  name: kube-dns
+  namespace: kube-system
+  resourceVersion: "164"
+  uid: 1b903a2c-c78e-4f55-98e0-3688daf11ce8
 type: Normal

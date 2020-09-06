@@ -1,18 +1,12 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:47:55Z"
+deprecatedLastTimestamp: "2020-09-06T09:47:55Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-46-143.us-west-2.compute.internal
 eventTime: null
-firstTimestamp: "2020-09-06T09:47:55Z"
-involvedObject:
-  apiVersion: v1
-  fieldPath: spec.containers{sidecar}
-  kind: Pod
-  name: kube-dns-64f86fb8dd-wcbmt
-  namespace: kube-system
-  resourceVersion: "620"
-  uid: 71924c65-3efc-4a0c-b544-514cd1dbe8e8
 kind: Event
-lastTimestamp: "2020-09-06T09:47:55Z"
-message: Successfully pulled image "k8s.gcr.io/k8s-dns-sidecar:1.15.13"
 metadata:
   creationTimestamp: "2020-09-06T09:47:55Z"
   managedFields:
@@ -41,10 +35,14 @@ metadata:
     time: "2020-09-06T09:47:55Z"
   name: kube-dns-64f86fb8dd-wcbmt.163228cc32342bf6
   namespace: kube-system
+note: Successfully pulled image "k8s.gcr.io/k8s-dns-sidecar:1.15.13"
 reason: Pulled
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: kubelet
-  host: ip-172-20-46-143.us-west-2.compute.internal
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{sidecar}
+  kind: Pod
+  name: kube-dns-64f86fb8dd-wcbmt
+  namespace: kube-system
+  resourceVersion: "620"
+  uid: 71924c65-3efc-4a0c-b544-514cd1dbe8e8
 type: Normal
