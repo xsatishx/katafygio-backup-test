@@ -1,12 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:45:08Z"
-deprecatedLastTimestamp: "2020-09-06T09:45:08Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:45:08Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-proxy}
+  kind: Pod
+  name: kube-proxy-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: a8a221e743f317e4033829d2a7c547a6
 kind: Event
+lastTimestamp: "2020-09-06T09:45:08Z"
+message: Created container kube-proxy
 metadata:
   creationTimestamp: "2020-09-06T09:45:45Z"
   managedFields:
@@ -34,13 +39,10 @@ metadata:
     time: "2020-09-06T09:45:45Z"
   name: kube-proxy-ip-172-20-47-215.us-west-2.compute.internal.163228a57e373434
   namespace: kube-system
-note: Created container kube-proxy
 reason: Created
-regarding:
-  apiVersion: v1
-  fieldPath: spec.containers{kube-proxy}
-  kind: Pod
-  name: kube-proxy-ip-172-20-47-215.us-west-2.compute.internal
-  namespace: kube-system
-  uid: a8a221e743f317e4033829d2a7c547a6
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 type: Normal

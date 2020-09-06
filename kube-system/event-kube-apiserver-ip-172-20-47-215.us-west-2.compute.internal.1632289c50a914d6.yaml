@@ -1,12 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:44:29Z"
-deprecatedLastTimestamp: "2020-09-06T09:44:29Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:44:29Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver}
+  kind: Pod
+  name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: da83f2d287b6c7dfced3597d1bf3e983
 kind: Event
+lastTimestamp: "2020-09-06T09:44:29Z"
+message: Successfully pulled image "k8s.gcr.io/kube-apiserver:v1.18.8"
 metadata:
   creationTimestamp: "2020-09-06T09:45:42Z"
   managedFields:
@@ -34,13 +39,10 @@ metadata:
     time: "2020-09-06T09:45:42Z"
   name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal.1632289c50a914d6
   namespace: kube-system
-note: Successfully pulled image "k8s.gcr.io/kube-apiserver:v1.18.8"
 reason: Pulled
-regarding:
-  apiVersion: v1
-  fieldPath: spec.containers{kube-apiserver}
-  kind: Pod
-  name: kube-apiserver-ip-172-20-47-215.us-west-2.compute.internal
-  namespace: kube-system
-  uid: da83f2d287b6c7dfced3597d1bf3e983
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 type: Normal

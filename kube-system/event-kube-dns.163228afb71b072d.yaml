@@ -1,11 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
-deprecatedLastTimestamp: "2020-09-06T09:45:52Z"
-deprecatedSource:
-  component: deployment-controller
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:45:52Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-dns
+  namespace: kube-system
+  resourceVersion: "158"
+  uid: a117ef7b-4b3f-49db-9ad6-997d2df0d4c1
 kind: Event
+lastTimestamp: "2020-09-06T09:45:52Z"
+message: Scaled up replica set kube-dns-64f86fb8dd to 1
 metadata:
   creationTimestamp: "2020-09-06T09:45:52Z"
   managedFields:
@@ -32,13 +38,9 @@ metadata:
     time: "2020-09-06T09:45:52Z"
   name: kube-dns.163228afb71b072d
   namespace: kube-system
-note: Scaled up replica set kube-dns-64f86fb8dd to 1
 reason: ScalingReplicaSet
-regarding:
-  apiVersion: apps/v1
-  kind: Deployment
-  name: kube-dns
-  namespace: kube-system
-  resourceVersion: "158"
-  uid: a117ef7b-4b3f-49db-9ad6-997d2df0d4c1
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: deployment-controller
 type: Normal

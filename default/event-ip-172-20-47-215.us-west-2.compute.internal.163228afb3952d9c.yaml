@@ -1,11 +1,16 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
-deprecatedLastTimestamp: "2020-09-06T09:45:52Z"
-deprecatedSource:
-  component: node-controller
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:45:52Z"
+involvedObject:
+  apiVersion: v1
+  kind: Node
+  name: ip-172-20-47-215.us-west-2.compute.internal
+  uid: a1ab8423-fa81-4599-aad1-d8aad4aeec7d
 kind: Event
+lastTimestamp: "2020-09-06T09:45:52Z"
+message: 'Node ip-172-20-47-215.us-west-2.compute.internal event: Registered Node
+  ip-172-20-47-215.us-west-2.compute.internal in Controller'
 metadata:
   creationTimestamp: "2020-09-06T09:45:52Z"
   managedFields:
@@ -30,12 +35,9 @@ metadata:
     time: "2020-09-06T09:45:52Z"
   name: ip-172-20-47-215.us-west-2.compute.internal.163228afb3952d9c
   namespace: default
-note: 'Node ip-172-20-47-215.us-west-2.compute.internal event: Registered Node ip-172-20-47-215.us-west-2.compute.internal
-  in Controller'
 reason: RegisteredNode
-regarding:
-  apiVersion: v1
-  kind: Node
-  name: ip-172-20-47-215.us-west-2.compute.internal
-  uid: a1ab8423-fa81-4599-aad1-d8aad4aeec7d
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
 type: Normal

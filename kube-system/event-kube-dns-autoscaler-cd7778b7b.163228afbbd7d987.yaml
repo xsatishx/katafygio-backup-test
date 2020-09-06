@@ -1,11 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
-deprecatedLastTimestamp: "2020-09-06T09:45:52Z"
-deprecatedSource:
-  component: replicaset-controller
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:45:52Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: kube-dns-autoscaler-cd7778b7b
+  namespace: kube-system
+  resourceVersion: "315"
+  uid: 721efd91-b4dc-42c7-a383-4060d9d3acc7
 kind: Event
+lastTimestamp: "2020-09-06T09:45:52Z"
+message: 'Created pod: kube-dns-autoscaler-cd7778b7b-fj7j8'
 metadata:
   creationTimestamp: "2020-09-06T09:45:52Z"
   managedFields:
@@ -32,13 +38,9 @@ metadata:
     time: "2020-09-06T09:45:52Z"
   name: kube-dns-autoscaler-cd7778b7b.163228afbbd7d987
   namespace: kube-system
-note: 'Created pod: kube-dns-autoscaler-cd7778b7b-fj7j8'
 reason: SuccessfulCreate
-regarding:
-  apiVersion: apps/v1
-  kind: ReplicaSet
-  name: kube-dns-autoscaler-cd7778b7b
-  namespace: kube-system
-  resourceVersion: "315"
-  uid: 721efd91-b4dc-42c7-a383-4060d9d3acc7
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: replicaset-controller
 type: Normal

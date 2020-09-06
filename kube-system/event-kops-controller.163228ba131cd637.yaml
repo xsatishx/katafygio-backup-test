@@ -1,11 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:46:37Z"
-deprecatedLastTimestamp: "2020-09-06T09:46:37Z"
-deprecatedSource:
-  component: daemonset-controller
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:46:37Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: kops-controller
+  namespace: kube-system
+  resourceVersion: "313"
+  uid: 012f30a0-d5d2-46d8-a5a1-1bc25c99728a
 kind: Event
+lastTimestamp: "2020-09-06T09:46:37Z"
+message: 'Created pod: kops-controller-n2rch'
 metadata:
   creationTimestamp: "2020-09-06T09:46:37Z"
   managedFields:
@@ -32,13 +38,9 @@ metadata:
     time: "2020-09-06T09:46:37Z"
   name: kops-controller.163228ba131cd637
   namespace: kube-system
-note: 'Created pod: kops-controller-n2rch'
 reason: SuccessfulCreate
-regarding:
-  apiVersion: apps/v1
-  kind: DaemonSet
-  name: kops-controller
-  namespace: kube-system
-  resourceVersion: "313"
-  uid: 012f30a0-d5d2-46d8-a5a1-1bc25c99728a
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: daemonset-controller
 type: Normal

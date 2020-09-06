@@ -1,11 +1,17 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:45:53Z"
-deprecatedLastTimestamp: "2020-09-06T09:45:53Z"
-deprecatedSource:
-  component: default-scheduler
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:45:53Z"
+involvedObject:
+  apiVersion: v1
+  kind: Endpoints
+  name: kube-scheduler
+  namespace: kube-system
+  resourceVersion: "353"
+  uid: 18cacd60-636d-43f6-b1e1-8e480a9b7534
 kind: Event
+lastTimestamp: "2020-09-06T09:45:53Z"
+message: ip-172-20-47-215_aa1e72d9-2c6c-4e71-9cbe-91811101b6d9 became leader
 metadata:
   creationTimestamp: "2020-09-06T09:45:53Z"
   managedFields:
@@ -32,13 +38,9 @@ metadata:
     time: "2020-09-06T09:45:53Z"
   name: kube-scheduler.163228afd9f4cb0b
   namespace: kube-system
-note: ip-172-20-47-215_aa1e72d9-2c6c-4e71-9cbe-91811101b6d9 became leader
 reason: LeaderElection
-regarding:
-  apiVersion: v1
-  kind: Endpoints
-  name: kube-scheduler
-  namespace: kube-system
-  resourceVersion: "353"
-  uid: 18cacd60-636d-43f6-b1e1-8e480a9b7534
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
 type: Normal

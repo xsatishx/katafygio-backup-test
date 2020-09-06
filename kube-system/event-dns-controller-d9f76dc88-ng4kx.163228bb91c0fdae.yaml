@@ -1,12 +1,18 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:46:43Z"
-deprecatedLastTimestamp: "2020-09-06T09:46:43Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-47-215.us-west-2.compute.internal
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:46:43Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{dns-controller}
+  kind: Pod
+  name: dns-controller-d9f76dc88-ng4kx
+  namespace: kube-system
+  resourceVersion: "472"
+  uid: bf7cda26-3711-4d9a-8483-ac67a4d61305
 kind: Event
+lastTimestamp: "2020-09-06T09:46:43Z"
+message: Created container dns-controller
 metadata:
   creationTimestamp: "2020-09-06T09:46:43Z"
   managedFields:
@@ -35,14 +41,10 @@ metadata:
     time: "2020-09-06T09:46:43Z"
   name: dns-controller-d9f76dc88-ng4kx.163228bb91c0fdae
   namespace: kube-system
-note: Created container dns-controller
 reason: Created
-regarding:
-  apiVersion: v1
-  fieldPath: spec.containers{dns-controller}
-  kind: Pod
-  name: dns-controller-d9f76dc88-ng4kx
-  namespace: kube-system
-  resourceVersion: "472"
-  uid: bf7cda26-3711-4d9a-8483-ac67a4d61305
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
 type: Normal

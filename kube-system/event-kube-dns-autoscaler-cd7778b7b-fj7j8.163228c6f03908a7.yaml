@@ -1,11 +1,18 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:47:32Z"
-deprecatedLastTimestamp: "2020-09-06T09:47:32Z"
-deprecatedSource:
-  component: default-scheduler
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:47:32Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: kube-dns-autoscaler-cd7778b7b-fj7j8
+  namespace: kube-system
+  resourceVersion: "549"
+  uid: c0784d5c-cecb-4091-ac91-00926d88d1d2
 kind: Event
+lastTimestamp: "2020-09-06T09:47:32Z"
+message: Successfully assigned kube-system/kube-dns-autoscaler-cd7778b7b-fj7j8 to
+  ip-172-20-46-143.us-west-2.compute.internal
 metadata:
   creationTimestamp: "2020-09-06T09:47:32Z"
   managedFields:
@@ -32,13 +39,9 @@ metadata:
     time: "2020-09-06T09:47:32Z"
   name: kube-dns-autoscaler-cd7778b7b-fj7j8.163228c6f03908a7
   namespace: kube-system
-note: Successfully assigned kube-system/kube-dns-autoscaler-cd7778b7b-fj7j8 to ip-172-20-46-143.us-west-2.compute.internal
 reason: Scheduled
-regarding:
-  apiVersion: v1
-  kind: Pod
-  name: kube-dns-autoscaler-cd7778b7b-fj7j8
-  namespace: kube-system
-  resourceVersion: "549"
-  uid: c0784d5c-cecb-4091-ac91-00926d88d1d2
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
 type: Normal
