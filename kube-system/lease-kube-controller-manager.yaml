@@ -14,7 +14,7 @@ metadata:
         f:renewTime: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2020-09-06T10:00:38Z"
+    time: "2020-09-06T10:00:48Z"
   name: kube-controller-manager
   namespace: kube-system
 spec:
@@ -22,4 +22,4 @@ spec:
   holderIdentity: ip-172-20-47-215_37dc3efb-5c16-4403-af41-313b050a250c
   leaseDurationSeconds: 15
   leaseTransitions: 0
-  renewTime: "2020-09-06T10:00:38.914250Z"
+  renewTime: "2020-09-06T10:00:48.984415Z"
