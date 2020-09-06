@@ -177,7 +177,7 @@ metadata:
           f:systemUUID: {}
     manager: kubelet
     operation: Update
-    time: "2020-09-06T10:27:40Z"
+    time: "2020-09-06T10:32:42Z"
   name: ip-172-20-47-215.us-west-2.compute.internal
 spec:
   podCIDR: 100.96.0.0/24
