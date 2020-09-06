@@ -1,0 +1,164 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"DaemonSet","metadata":{"annotations":{},"labels":{"k8s-addon":"kops-controller.addons.k8s.io","k8s-app":"kops-controller","version":"v1.18.0"},"name":"kops-controller","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"kops-controller"}},"template":{"metadata":{"labels":{"k8s-addon":"kops-controller.addons.k8s.io","k8s-app":"kops-controller","version":"v1.18.0"}},"spec":{"containers":[{"command":["/usr/bin/kops-controller","--v=2","--conf=/etc/kubernetes/kops-controller/config.yaml"],"image":"kope/kops-controller:1.18.0","name":"kops-controller","resources":{"requests":{"cpu":"50m","memory":"50Mi"}},"securityContext":{"runAsNonRoot":true},"volumeMounts":[{"mountPath":"/etc/kubernetes/kops-controller/","name":"kops-controller-config"}]}],"dnsPolicy":"Default","hostNetwork":true,"nodeSelector":{"node-role.kubernetes.io/master":""},"priorityClassName":"system-node-critical","serviceAccount":"kops-controller","tolerations":[{"key":"node-role.kubernetes.io/master","operator":"Exists"}],"volumes":[{"configMap":{"name":"kops-controller"},"name":"kops-controller-config"}]}},"updateStrategy":{"rollingUpdate":{"maxUnavailable":1},"type":"RollingUpdate"}}}
+  creationTimestamp: "2020-09-06T09:45:36Z"
+  labels:
+    k8s-addon: kops-controller.addons.k8s.io
+    k8s-app: kops-controller
+    version: v1.18.0
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deprecated.daemonset.template.generation: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+          f:version: {}
+      f:spec:
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:k8s-app: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:k8s-addon: {}
+              f:k8s-app: {}
+              f:version: {}
+          f:spec:
+            f:containers:
+              k:{"name":"kops-controller"}:
+                .: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/kubernetes/kops-controller/"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:hostNetwork: {}
+            f:nodeSelector:
+              .: {}
+              f:node-role.kubernetes.io/master: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"kops-controller-config"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+        f:updateStrategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxUnavailable: {}
+          f:type: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-06T09:45:36Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberAvailable: {}
+        f:numberReady: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:47:00Z"
+  name: kops-controller
+  namespace: kube-system
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: kops-controller
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        k8s-addon: kops-controller.addons.k8s.io
+        k8s-app: kops-controller
+        version: v1.18.0
+    spec:
+      containers:
+      - command:
+        - /usr/bin/kops-controller
+        - --v=2
+        - --conf=/etc/kubernetes/kops-controller/config.yaml
+        image: kope/kops-controller:1.18.0
+        imagePullPolicy: IfNotPresent
+        name: kops-controller
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+        securityContext:
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/kubernetes/kops-controller/
+          name: kops-controller-config
+      dnsPolicy: Default
+      hostNetwork: true
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-node-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: kops-controller
+      serviceAccountName: kops-controller
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: kops-controller
+        name: kops-controller-config
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate

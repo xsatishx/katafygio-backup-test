@@ -1,0 +1,168 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "1"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2020-09-06T09:45:52Z"
+  labels:
+    k8s-addon: dns-controller.addons.k8s.io
+    k8s-app: dns-controller
+    pod-template-hash: d9f76dc88
+    version: v1.18.0
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+          f:version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"a6b1e626-424f-4e0e-99dc-da2e5f468065"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:replicas: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:scheduler.alpha.kubernetes.io/critical-pod: {}
+            f:labels:
+              .: {}
+              f:k8s-addon: {}
+              f:k8s-app: {}
+              f:pod-template-hash: {}
+              f:version: {}
+          f:spec:
+            f:containers:
+              k:{"name":"dns-controller"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:hostNetwork: {}
+            f:nodeSelector:
+              .: {}
+              f:node-role.kubernetes.io/master: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:46:54Z"
+  name: dns-controller-d9f76dc88
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: dns-controller
+    uid: a6b1e626-424f-4e0e-99dc-da2e5f468065
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: dns-controller
+      pod-template-hash: d9f76dc88
+  template:
+    metadata:
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ""
+      creationTimestamp: null
+      labels:
+        k8s-addon: dns-controller.addons.k8s.io
+        k8s-app: dns-controller
+        pod-template-hash: d9f76dc88
+        version: v1.18.0
+    spec:
+      containers:
+      - command:
+        - /usr/bin/dns-controller
+        - --watch-ingress=false
+        - --dns=gossip
+        - --gossip-seed=127.0.0.1:3999
+        - --gossip-protocol-secondary=memberlist
+        - --gossip-listen-secondary=0.0.0.0:3993
+        - --gossip-seed-secondary=127.0.0.1:4000
+        - --zone=*/*
+        - -v=2
+        env:
+        - name: KUBERNETES_SERVICE_HOST
+          value: 127.0.0.1
+        image: kope/dns-controller:1.18.0
+        imagePullPolicy: IfNotPresent
+        name: dns-controller
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+        securityContext:
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: Default
+      hostNetwork: true
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: dns-controller
+      serviceAccountName: dns-controller
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - operator: Exists

@@ -1,0 +1,31 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    {"cloud":"aws","configBase":"s3://k8s-kops-gossip-state/mycluster.k8s.local"}
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"config.yaml":"{\"cloud\":\"aws\",\"configBase\":\"s3://k8s-kops-gossip-state/mycluster.k8s.local\"}\n"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"k8s-addon":"kops-controller.addons.k8s.io"},"name":"kops-controller","namespace":"kube-system"}}
+  creationTimestamp: "2020-09-06T09:45:36Z"
+  labels:
+    k8s-addon: kops-controller.addons.k8s.io
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:config.yaml: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-06T09:45:36Z"
+  name: kops-controller
+  namespace: kube-system

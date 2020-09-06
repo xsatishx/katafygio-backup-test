@@ -1,0 +1,17 @@
+apiVersion: scheduling.k8s.io/v1beta1
+description: Used for system critical pods that must run in the cluster, but can be
+  moved to another node if necessary.
+kind: PriorityClass
+metadata:
+  creationTimestamp: "2020-09-06T09:45:32Z"
+  managedFields:
+  - apiVersion: scheduling.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:description: {}
+      f:value: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-09-06T09:45:32Z"
+  name: system-cluster-critical
+value: 2000000000

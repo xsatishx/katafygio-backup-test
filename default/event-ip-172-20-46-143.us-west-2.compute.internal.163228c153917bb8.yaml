@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:47:08Z"
+deprecatedLastTimestamp: "2020-09-06T09:47:08Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:47:08Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:kind: {}
+        f:name: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:47:08Z"
+  name: ip-172-20-46-143.us-west-2.compute.internal.163228c153917bb8
+  namespace: default
+note: 'Node ip-172-20-46-143.us-west-2.compute.internal event: Registered Node ip-172-20-46-143.us-west-2.compute.internal
+  in Controller'
+reason: RegisteredNode
+regarding:
+  apiVersion: v1
+  kind: Node
+  name: ip-172-20-46-143.us-west-2.compute.internal
+  uid: 0c95b167-9e22-4bb0-9323-a4803008d134
+type: Normal

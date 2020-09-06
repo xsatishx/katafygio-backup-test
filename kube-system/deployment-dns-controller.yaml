@@ -1,0 +1,178 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"k8s-addon":"dns-controller.addons.k8s.io","k8s-app":"dns-controller","version":"v1.18.0"},"name":"dns-controller","namespace":"kube-system"},"spec":{"replicas":1,"selector":{"matchLabels":{"k8s-app":"dns-controller"}},"strategy":{"type":"Recreate"},"template":{"metadata":{"annotations":{"scheduler.alpha.kubernetes.io/critical-pod":""},"labels":{"k8s-addon":"dns-controller.addons.k8s.io","k8s-app":"dns-controller","version":"v1.18.0"}},"spec":{"containers":[{"command":["/usr/bin/dns-controller","--watch-ingress=false","--dns=gossip","--gossip-seed=127.0.0.1:3999","--gossip-protocol-secondary=memberlist","--gossip-listen-secondary=0.0.0.0:3993","--gossip-seed-secondary=127.0.0.1:4000","--zone=*/*","-v=2"],"env":[{"name":"KUBERNETES_SERVICE_HOST","value":"127.0.0.1"}],"image":"kope/dns-controller:1.18.0","name":"dns-controller","resources":{"requests":{"cpu":"50m","memory":"50Mi"}},"securityContext":{"runAsNonRoot":true}}],"dnsPolicy":"Default","hostNetwork":true,"nodeSelector":{"node-role.kubernetes.io/master":""},"priorityClassName":"system-cluster-critical","serviceAccount":"dns-controller","tolerations":[{"operator":"Exists"}]}}}}
+  creationTimestamp: "2020-09-06T09:45:35Z"
+  labels:
+    k8s-addon: dns-controller.addons.k8s.io
+    k8s-app: dns-controller
+    version: v1.18.0
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+          f:version: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:k8s-app: {}
+        f:strategy:
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:scheduler.alpha.kubernetes.io/critical-pod: {}
+            f:labels:
+              .: {}
+              f:k8s-addon: {}
+              f:k8s-app: {}
+              f:version: {}
+          f:spec:
+            f:containers:
+              k:{"name":"dns-controller"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:hostNetwork: {}
+            f:nodeSelector:
+              .: {}
+              f:node-role.kubernetes.io/master: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-06T09:45:35Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:46:55Z"
+  name: dns-controller
+  namespace: kube-system
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: dns-controller
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ""
+      creationTimestamp: null
+      labels:
+        k8s-addon: dns-controller.addons.k8s.io
+        k8s-app: dns-controller
+        version: v1.18.0
+    spec:
+      containers:
+      - command:
+        - /usr/bin/dns-controller
+        - --watch-ingress=false
+        - --dns=gossip
+        - --gossip-seed=127.0.0.1:3999
+        - --gossip-protocol-secondary=memberlist
+        - --gossip-listen-secondary=0.0.0.0:3993
+        - --gossip-seed-secondary=127.0.0.1:4000
+        - --zone=*/*
+        - -v=2
+        env:
+        - name: KUBERNETES_SERVICE_HOST
+          value: 127.0.0.1
+        image: kope/dns-controller:1.18.0
+        imagePullPolicy: IfNotPresent
+        name: dns-controller
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+        securityContext:
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: Default
+      hostNetwork: true
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: dns-controller
+      serviceAccountName: dns-controller
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - operator: Exists

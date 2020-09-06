@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    addons.k8s.io/core.addons.k8s.io: '{"version":"1.4.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","manifestHash":"3ffe9ac576f9eec72e2bdfbd2ea17d56d9b17b90"}'
+    addons.k8s.io/dns-controller.addons.k8s.io: '{"version":"1.18.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"k8s-1.12","manifestHash":"d65ac132acdd922aa1d919dd00b4fe09edf8c4ff"}'
+    addons.k8s.io/kops-controller.addons.k8s.io: '{"version":"1.18.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"k8s-1.16","manifestHash":"2b531c2f5528072dd255f63e6a8d9cb0224c9890"}'
+    addons.k8s.io/kube-dns.addons.k8s.io: '{"version":"1.15.13-kops.1","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"k8s-1.12","manifestHash":"42ba17717415e9c2e3c9a2142654c2a48a915318"}'
+    addons.k8s.io/kubelet-api.rbac.addons.k8s.io: '{"version":"v0.0.1","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"k8s-1.9","manifestHash":"e1508d77cb4e527d7a2939babe36dc350dd83745"}'
+    addons.k8s.io/limit-range.addons.k8s.io: '{"version":"1.5.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","manifestHash":"2ea50e23f1a5aa41df3724630ac25173738cc90c"}'
+    addons.k8s.io/rbac.addons.k8s.io: '{"version":"1.8.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"k8s-1.8","manifestHash":"5d53ce7b920cd1e8d65d2306d80a041420711914"}'
+    addons.k8s.io/storage-aws.addons.k8s.io: '{"version":"1.15.0","channel":"s3://k8s-kops-gossip-state/mycluster.k8s.local/addons/bootstrap-channel.yaml","id":"v1.15.0","manifestHash":"00cf6e46e25b736b2da93c6025ce482474d83904"}'
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"kube-system"}}
+  creationTimestamp: "2020-09-06T09:45:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-09-06T09:45:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-06T09:45:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:addons.k8s.io/core.addons.k8s.io: {}
+          f:addons.k8s.io/dns-controller.addons.k8s.io: {}
+          f:addons.k8s.io/kops-controller.addons.k8s.io: {}
+          f:addons.k8s.io/kube-dns.addons.k8s.io: {}
+          f:addons.k8s.io/kubelet-api.rbac.addons.k8s.io: {}
+          f:addons.k8s.io/limit-range.addons.k8s.io: {}
+          f:addons.k8s.io/rbac.addons.k8s.io: {}
+          f:addons.k8s.io/storage-aws.addons.k8s.io: {}
+    manager: channels
+    operation: Update
+    time: "2020-09-06T09:45:37Z"
+  name: kube-system
+spec:
+  finalizers:
+  - kubernetes

@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:44:26Z"
+deprecatedLastTimestamp: "2020-09-06T09:44:26Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:45:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:fieldPath: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:45:42Z"
+  name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal.1632289b800e130a
+  namespace: kube-system
+note: Created container kube-controller-manager
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: 01f50fdc5ee710649fde27e174d8c34a
+type: Normal

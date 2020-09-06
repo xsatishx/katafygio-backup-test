@@ -1,0 +1,85 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1beta1
+endpoints:
+- addresses:
+  - 100.96.1.4
+  conditions:
+    ready: true
+  targetRef:
+    kind: Pod
+    name: kube-dns-64f86fb8dd-7gxnf
+    namespace: kube-system
+    resourceVersion: "737"
+    uid: 1b2f7e51-b4db-43c0-a859-30edc3927b8e
+  topology:
+    kubernetes.io/hostname: ip-172-20-46-143.us-west-2.compute.internal
+    topology.kubernetes.io/region: us-west-2
+    topology.kubernetes.io/zone: us-west-2c
+- addresses:
+  - 100.96.1.3
+  conditions:
+    ready: true
+  targetRef:
+    kind: Pod
+    name: kube-dns-64f86fb8dd-wcbmt
+    namespace: kube-system
+    resourceVersion: "745"
+    uid: 71924c65-3efc-4a0c-b544-514cd1dbe8e8
+  topology:
+    kubernetes.io/hostname: ip-172-20-46-143.us-west-2.compute.internal
+    topology.kubernetes.io/region: us-west-2
+    topology.kubernetes.io/zone: us-west-2c
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2020-09-06T09:48:03Z"
+  creationTimestamp: "2020-09-06T09:45:52Z"
+  generateName: kube-dns-
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: kube-dns
+  managedFields:
+  - apiVersion: discovery.k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:addressType: {}
+      f:endpoints: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:endpointslice.kubernetes.io/managed-by: {}
+          f:kubernetes.io/service-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8995095a-857b-4611-b2d0-b8333649c6df"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:ports: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:48:03Z"
+  name: kube-dns-swxp9
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-dns
+    uid: 8995095a-857b-4611-b2d0-b8333649c6df
+ports:
+- name: dns-tcp
+  port: 53
+  protocol: TCP
+- name: dns
+  port: 53
+  protocol: UDP

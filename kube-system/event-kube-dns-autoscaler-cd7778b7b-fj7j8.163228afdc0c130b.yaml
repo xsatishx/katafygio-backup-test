@@ -1,0 +1,45 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 6
+deprecatedFirstTimestamp: "2020-09-06T09:45:53Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:59Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:45:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2020-09-06T09:47:00Z"
+  name: kube-dns-autoscaler-cd7778b7b-fj7j8.163228afdc0c130b
+  namespace: kube-system
+note: '0/1 nodes are available: 1 node(s) had taint {node-role.kubernetes.io/master:
+  }, that the pod didn''t tolerate.'
+reason: FailedScheduling
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-dns-autoscaler-cd7778b7b-fj7j8
+  namespace: kube-system
+  resourceVersion: "329"
+  uid: c0784d5c-cecb-4091-ac91-00926d88d1d2
+type: Warning

@@ -1,0 +1,48 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:46:38Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:38Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:46:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:fieldPath: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:46:39Z"
+  name: kops-controller-n2rch.163228ba7565310e
+  namespace: kube-system
+note: Pulling image "kope/kops-controller:1.18.0"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kops-controller}
+  kind: Pod
+  name: kops-controller-n2rch
+  namespace: kube-system
+  resourceVersion: "473"
+  uid: 394e7992-ca86-4677-8f24-aed3626b1b88
+type: Normal

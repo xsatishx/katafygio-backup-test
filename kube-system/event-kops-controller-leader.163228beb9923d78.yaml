@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:46:57Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:57Z"
+deprecatedSource:
+  component: ip-172-20-47-215_fe98e2ef-7d0b-44a5-86f1-b54e24c4ea30
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:46:57Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kops-controller
+    operation: Update
+    time: "2020-09-06T09:46:57Z"
+  name: kops-controller-leader.163228beb9923d78
+  namespace: kube-system
+note: ip-172-20-47-215_fe98e2ef-7d0b-44a5-86f1-b54e24c4ea30 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: kops-controller-leader
+  namespace: kube-system
+  resourceVersion: "508"
+  uid: 30b4fa61-a971-4447-bc10-e4d7372e9537
+type: Normal

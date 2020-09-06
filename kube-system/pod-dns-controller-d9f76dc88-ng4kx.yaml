@@ -1,0 +1,192 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/critical-pod: ""
+  creationTimestamp: "2020-09-06T09:45:52Z"
+  generateName: dns-controller-d9f76dc88-
+  labels:
+    k8s-addon: dns-controller.addons.k8s.io
+    k8s-app: dns-controller
+    pod-template-hash: d9f76dc88
+    version: v1.18.0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:scheduler.alpha.kubernetes.io/critical-pod: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+          f:version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"721b30f6-87d2-447e-90af-d944b715214f"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:containers:
+          k:{"name":"dns-controller"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:runAsNonRoot: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector:
+          .: {}
+          f:node-role.kubernetes.io/master: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:45:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2020-09-06T09:45:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"172.20.47.215"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:46:52Z"
+  name: dns-controller-d9f76dc88-ng4kx
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: dns-controller-d9f76dc88
+    uid: 721b30f6-87d2-447e-90af-d944b715214f
+spec:
+  containers:
+  - command:
+    - /usr/bin/dns-controller
+    - --watch-ingress=false
+    - --dns=gossip
+    - --gossip-seed=127.0.0.1:3999
+    - --gossip-protocol-secondary=memberlist
+    - --gossip-listen-secondary=0.0.0.0:3993
+    - --gossip-seed-secondary=127.0.0.1:4000
+    - --zone=*/*
+    - -v=2
+    env:
+    - name: KUBERNETES_SERVICE_HOST
+      value: 127.0.0.1
+    image: kope/dns-controller:1.18.0
+    imagePullPolicy: IfNotPresent
+    name: dns-controller
+    resources:
+      requests:
+        cpu: 50m
+        memory: 50Mi
+    securityContext:
+      runAsNonRoot: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: dns-controller-token-fvmgt
+      readOnly: true
+  dnsPolicy: Default
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ip-172-20-47-215.us-west-2.compute.internal
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: dns-controller
+  serviceAccountName: dns-controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - name: dns-controller-token-fvmgt
+    secret:
+      defaultMode: 420
+      secretName: dns-controller-token-fvmgt

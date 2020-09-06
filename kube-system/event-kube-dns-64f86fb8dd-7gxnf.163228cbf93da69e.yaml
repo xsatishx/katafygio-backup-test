@@ -1,0 +1,49 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:47:54Z"
+deprecatedLastTimestamp: "2020-09-06T09:47:54Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-46-143.us-west-2.compute.internal
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:47:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:fieldPath: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:47:54Z"
+  name: kube-dns-64f86fb8dd-7gxnf.163228cbf93da69e
+  namespace: kube-system
+note: Container image "k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.13" already present
+  on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{dnsmasq}
+  kind: Pod
+  name: kube-dns-64f86fb8dd-7gxnf
+  namespace: kube-system
+  resourceVersion: "697"
+  uid: 1b2f7e51-b4db-43c0-a859-30edc3927b8e
+type: Normal

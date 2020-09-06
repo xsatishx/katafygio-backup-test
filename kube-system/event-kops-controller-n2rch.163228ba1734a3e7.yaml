@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:46:37Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:37Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:46:37Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2020-09-06T09:46:37Z"
+  name: kops-controller-n2rch.163228ba1734a3e7
+  namespace: kube-system
+note: Successfully assigned kube-system/kops-controller-n2rch to ip-172-20-47-215.us-west-2.compute.internal
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kops-controller-n2rch
+  namespace: kube-system
+  resourceVersion: "469"
+  uid: 394e7992-ca86-4677-8f24-aed3626b1b88
+type: Normal

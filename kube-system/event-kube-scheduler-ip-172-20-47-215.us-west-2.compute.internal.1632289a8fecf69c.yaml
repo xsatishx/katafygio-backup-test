@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:44:21Z"
+deprecatedLastTimestamp: "2020-09-06T09:44:21Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:45:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:fieldPath: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:45:41Z"
+  name: kube-scheduler-ip-172-20-47-215.us-west-2.compute.internal.1632289a8fecf69c
+  namespace: kube-system
+note: Pulling image "k8s.gcr.io/kube-scheduler:v1.18.8"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-scheduler}
+  kind: Pod
+  name: kube-scheduler-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: 721c7d27eb2eb23c7b177d1dca4ce59e
+type: Normal

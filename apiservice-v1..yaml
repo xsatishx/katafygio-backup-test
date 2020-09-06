@@ -1,0 +1,11 @@
+apiVersion: apiregistration.k8s.io/v1beta1
+kind: APIService
+metadata:
+  creationTimestamp: "2020-09-06T09:45:31Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: onstart
+  name: v1.
+spec:
+  groupPriorityMinimum: 18000
+  version: v1
+  versionPriority: 1

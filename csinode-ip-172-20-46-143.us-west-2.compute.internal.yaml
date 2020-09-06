@@ -1,0 +1,28 @@
+apiVersion: storage.k8s.io/v1beta1
+kind: CSINode
+metadata:
+  creationTimestamp: "2020-09-06T09:47:10Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0c95b167-9e22-4bb0-9323-a4803008d134"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:47:10Z"
+  name: ip-172-20-46-143.us-west-2.compute.internal
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: ip-172-20-46-143.us-west-2.compute.internal
+    uid: 0c95b167-9e22-4bb0-9323-a4803008d134
+spec:
+  drivers: null

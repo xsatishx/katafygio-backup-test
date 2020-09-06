@@ -1,0 +1,430 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: 01f50fdc5ee710649fde27e174d8c34a
+    kubernetes.io/config.mirror: 01f50fdc5ee710649fde27e174d8c34a
+    kubernetes.io/config.seen: "2020-09-06T09:44:19.850136945Z"
+    kubernetes.io/config.source: file
+    scheduler.alpha.kubernetes.io/critical-pod: ""
+  creationTimestamp: "2020-09-06T09:46:34Z"
+  labels:
+    k8s-app: kube-controller-manager
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:scheduler.alpha.kubernetes.io/critical-pod: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"a1ab8423-fa81-4599-aad1-d8aad4aeec7d"}:
+            .: {}
+            f:apiVersion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-controller-manager"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:host: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/openssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/ssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/srv/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/usr/lib/ssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/usr/libexec/kubernetes/kubelet-plugins/volume/exec/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/usr/local/openssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/usr/share/ssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/usr/ssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/lib/kube-controller-manager"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/log/kube-controller-manager.log"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/ssl"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"etcopenssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etcpkica-trust"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etcpkitls"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etcssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"logfile"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"srvkube"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"usrlibssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"usrlocalopenssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"usrsharessl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"usrssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"varlibkcm"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"varssl"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"volplugins"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"172.20.47.215"}:
+            .: {}
+            f:ip: {}
+        f:qosClass: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:46:40Z"
+  name: kube-controller-manager-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: ip-172-20-47-215.us-west-2.compute.internal
+    uid: a1ab8423-fa81-4599-aad1-d8aad4aeec7d
+spec:
+  containers:
+  - args:
+    - --allocate-node-cidrs=true
+    - --attach-detach-reconcile-sync-period=1m0s
+    - --cloud-provider=aws
+    - --cluster-cidr=100.96.0.0/11
+    - --cluster-name=mycluster.k8s.local
+    - --cluster-signing-cert-file=/srv/kubernetes/ca.crt
+    - --cluster-signing-key-file=/srv/kubernetes/ca.key
+    - --configure-cloud-routes=true
+    - --flex-volume-plugin-dir=/usr/libexec/kubernetes/kubelet-plugins/volume/exec/
+    - --kubeconfig=/var/lib/kube-controller-manager/kubeconfig
+    - --leader-elect=true
+    - --root-ca-file=/srv/kubernetes/ca.crt
+    - --service-account-private-key-file=/srv/kubernetes/server.key
+    - --use-service-account-credentials=true
+    - --v=2
+    - --logtostderr=false
+    - --alsologtostderr
+    - --log-file=/var/log/kube-controller-manager.log
+    command:
+    - /usr/local/bin/kube-controller-manager
+    image: k8s.gcr.io/kube-controller-manager:v1.18.8
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        host: 127.0.0.1
+        path: /healthz
+        port: 10252
+        scheme: HTTP
+      initialDelaySeconds: 15
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 15
+    name: kube-controller-manager
+    resources:
+      requests:
+        cpu: 100m
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/log/kube-controller-manager.log
+      name: logfile
+    - mountPath: /etc/ssl
+      name: etcssl
+      readOnly: true
+    - mountPath: /etc/pki/tls
+      name: etcpkitls
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust
+      name: etcpkica-trust
+      readOnly: true
+    - mountPath: /usr/share/ssl
+      name: usrsharessl
+      readOnly: true
+    - mountPath: /usr/ssl
+      name: usrssl
+      readOnly: true
+    - mountPath: /usr/lib/ssl
+      name: usrlibssl
+      readOnly: true
+    - mountPath: /usr/local/openssl
+      name: usrlocalopenssl
+      readOnly: true
+    - mountPath: /var/ssl
+      name: varssl
+      readOnly: true
+    - mountPath: /etc/openssl
+      name: etcopenssl
+      readOnly: true
+    - mountPath: /srv/kubernetes
+      name: srvkube
+      readOnly: true
+    - mountPath: /var/lib/kube-controller-manager
+      name: varlibkcm
+      readOnly: true
+    - mountPath: /usr/libexec/kubernetes/kubelet-plugins/volume/exec/
+      name: volplugins
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ip-172-20-47-215.us-west-2.compute.internal
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /var/log/kube-controller-manager.log
+      type: ""
+    name: logfile
+  - hostPath:
+      path: /etc/ssl
+      type: ""
+    name: etcssl
+  - hostPath:
+      path: /etc/pki/tls
+      type: ""
+    name: etcpkitls
+  - hostPath:
+      path: /etc/pki/ca-trust
+      type: ""
+    name: etcpkica-trust
+  - hostPath:
+      path: /usr/share/ssl
+      type: ""
+    name: usrsharessl
+  - hostPath:
+      path: /usr/ssl
+      type: ""
+    name: usrssl
+  - hostPath:
+      path: /usr/lib/ssl
+      type: ""
+    name: usrlibssl
+  - hostPath:
+      path: /usr/local/openssl
+      type: ""
+    name: usrlocalopenssl
+  - hostPath:
+      path: /var/ssl
+      type: ""
+    name: varssl
+  - hostPath:
+      path: /etc/openssl
+      type: ""
+    name: etcopenssl
+  - hostPath:
+      path: /srv/kubernetes
+      type: ""
+    name: srvkube
+  - hostPath:
+      path: /var/lib/kube-controller-manager
+      type: ""
+    name: varlibkcm
+  - hostPath:
+      path: /usr/libexec/kubernetes/kubelet-plugins/volume/exec/
+      type: ""
+    name: volplugins

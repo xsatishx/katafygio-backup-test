@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"ip-172-20-47-215_aa1e72d9-2c6c-4e71-9cbe-91811101b6d9","leaseDurationSeconds":15,"acquireTime":"2020-09-06T09:45:53Z","renewTime":"2020-09-06T10:00:39Z","leaderTransitions":0}'
+  creationTimestamp: "2020-09-06T09:45:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2020-09-06T10:00:39Z"
+  name: kube-scheduler
+  namespace: kube-system

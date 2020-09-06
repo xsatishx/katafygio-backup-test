@@ -1,0 +1,56 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{},"labels":{"k8s-addon":"kube-dns.addons.k8s.io"},"name":"kube-dns-autoscaler"},"rules":[{"apiGroups":[""],"resources":["nodes"],"verbs":["list","watch"]},{"apiGroups":[""],"resources":["replicationcontrollers/scale"],"verbs":["get","update"]},{"apiGroups":["extensions","apps"],"resources":["deployments/scale","replicasets/scale"],"verbs":["get","update"]},{"apiGroups":[""],"resources":["configmaps"],"verbs":["get","create"]}]}
+  creationTimestamp: "2020-09-06T09:45:34Z"
+  labels:
+    k8s-addon: kube-dns.addons.k8s.io
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:k8s-addon: {}
+      f:rules: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-09-06T09:45:34Z"
+  name: kube-dns-autoscaler
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - replicationcontrollers/scale
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - extensions
+  - apps
+  resources:
+  - deployments/scale
+  - replicasets/scale
+  verbs:
+  - get
+  - update
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - create

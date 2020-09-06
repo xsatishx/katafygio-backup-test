@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+data:
+  spec:
+    template:
+      $patch: replace
+      metadata:
+        creationTimestamp: null
+        labels:
+          k8s-addon: kops-controller.addons.k8s.io
+          k8s-app: kops-controller
+          version: v1.18.0
+      spec:
+        containers:
+        - command:
+          - /usr/bin/kops-controller
+          - --v=2
+          - --conf=/etc/kubernetes/kops-controller/config.yaml
+          image: kope/kops-controller:1.18.0
+          imagePullPolicy: IfNotPresent
+          name: kops-controller
+          resources:
+            requests:
+              cpu: 50m
+              memory: 50Mi
+          securityContext:
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/kubernetes/kops-controller/
+            name: kops-controller-config
+        dnsPolicy: Default
+        hostNetwork: true
+        nodeSelector:
+          node-role.kubernetes.io/master: ""
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: kops-controller
+        serviceAccountName: kops-controller
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: kops-controller
+          name: kops-controller-config
+kind: ControllerRevision
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"DaemonSet","metadata":{"annotations":{},"labels":{"k8s-addon":"kops-controller.addons.k8s.io","k8s-app":"kops-controller","version":"v1.18.0"},"name":"kops-controller","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"kops-controller"}},"template":{"metadata":{"labels":{"k8s-addon":"kops-controller.addons.k8s.io","k8s-app":"kops-controller","version":"v1.18.0"}},"spec":{"containers":[{"command":["/usr/bin/kops-controller","--v=2","--conf=/etc/kubernetes/kops-controller/config.yaml"],"image":"kope/kops-controller:1.18.0","name":"kops-controller","resources":{"requests":{"cpu":"50m","memory":"50Mi"}},"securityContext":{"runAsNonRoot":true},"volumeMounts":[{"mountPath":"/etc/kubernetes/kops-controller/","name":"kops-controller-config"}]}],"dnsPolicy":"Default","hostNetwork":true,"nodeSelector":{"node-role.kubernetes.io/master":""},"priorityClassName":"system-node-critical","serviceAccount":"kops-controller","tolerations":[{"key":"node-role.kubernetes.io/master","operator":"Exists"}],"volumes":[{"configMap":{"name":"kops-controller"},"name":"kops-controller-config"}]}},"updateStrategy":{"rollingUpdate":{"maxUnavailable":1},"type":"RollingUpdate"}}}
+  creationTimestamp: "2020-09-06T09:45:52Z"
+  labels:
+    controller-revision-hash: 577f5c5c7
+    k8s-addon: kops-controller.addons.k8s.io
+    k8s-app: kops-controller
+    version: v1.18.0
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deprecated.daemonset.template.generation: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:k8s-addon: {}
+          f:k8s-app: {}
+          f:version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"012f30a0-d5d2-46d8-a5a1-1bc25c99728a"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:revision: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:45:52Z"
+  name: kops-controller-577f5c5c7
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: kops-controller
+    uid: 012f30a0-d5d2-46d8-a5a1-1bc25c99728a
+revision: 1

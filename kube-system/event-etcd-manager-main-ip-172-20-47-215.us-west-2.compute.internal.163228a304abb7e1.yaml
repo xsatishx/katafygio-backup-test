@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2020-09-06T09:44:58Z"
+deprecatedLastTimestamp: "2020-09-06T09:44:58Z"
+deprecatedSource:
+  component: kubelet
+  host: ip-172-20-47-215.us-west-2.compute.internal
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:45:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:fieldPath: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-09-06T09:45:43Z"
+  name: etcd-manager-main-ip-172-20-47-215.us-west-2.compute.internal.163228a304abb7e1
+  namespace: kube-system
+note: Created container etcd-manager
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{etcd-manager}
+  kind: Pod
+  name: etcd-manager-main-ip-172-20-47-215.us-west-2.compute.internal
+  namespace: kube-system
+  uid: 02c40d244b35c2c3b90bf30c2066b705
+type: Normal

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"ip-172-20-47-215_fe98e2ef-7d0b-44a5-86f1-b54e24c4ea30","leaseDurationSeconds":15,"acquireTime":"2020-09-06T09:46:57Z","renewTime":"2020-09-06T10:00:39Z","leaderTransitions":0}'
+  creationTimestamp: "2020-09-06T09:46:57Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: kops-controller
+    operation: Update
+    time: "2020-09-06T10:00:39Z"
+  name: kops-controller-leader
+  namespace: kube-system

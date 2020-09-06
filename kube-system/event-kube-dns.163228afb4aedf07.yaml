@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1beta1
+deprecatedCount: 4
+deprecatedFirstTimestamp: "2020-09-06T09:45:52Z"
+deprecatedLastTimestamp: "2020-09-06T09:46:52Z"
+deprecatedSource:
+  component: controllermanager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2020-09-06T09:45:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject:
+        f:apiVersion: {}
+        f:kind: {}
+        f:name: {}
+        f:namespace: {}
+        f:resourceVersion: {}
+        f:uid: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-09-06T09:46:54Z"
+  name: kube-dns.163228afb4aedf07
+  namespace: kube-system
+note: No matching pods found
+reason: NoPods
+regarding:
+  apiVersion: policy/v1beta1
+  kind: PodDisruptionBudget
+  name: kube-dns
+  namespace: kube-system
+  resourceVersion: "164"
+  uid: 1b903a2c-c78e-4f55-98e0-3688daf11ce8
+type: Normal
