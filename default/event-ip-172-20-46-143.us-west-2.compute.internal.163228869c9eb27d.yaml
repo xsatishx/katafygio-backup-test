@@ -1,12 +1,14 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 7
-deprecatedFirstTimestamp: "2020-09-06T09:42:56Z"
-deprecatedLastTimestamp: "2020-09-06T09:42:57Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-46-143.us-west-2.compute.internal
+apiVersion: v1
+count: 7
 eventTime: null
+firstTimestamp: "2020-09-06T09:42:56Z"
+involvedObject:
+  kind: Node
+  name: ip-172-20-46-143.us-west-2.compute.internal
+  uid: ip-172-20-46-143.us-west-2.compute.internal
 kind: Event
+lastTimestamp: "2020-09-06T09:42:57Z"
+message: 'Node ip-172-20-46-143.us-west-2.compute.internal status is now: NodeHasSufficientPID'
 metadata:
   creationTimestamp: "2020-09-06T09:47:08Z"
   managedFields:
@@ -31,10 +33,10 @@ metadata:
     time: "2020-09-06T09:47:10Z"
   name: ip-172-20-46-143.us-west-2.compute.internal.163228869c9eb27d
   namespace: default
-note: 'Node ip-172-20-46-143.us-west-2.compute.internal status is now: NodeHasSufficientPID'
 reason: NodeHasSufficientPID
-regarding:
-  kind: Node
-  name: ip-172-20-46-143.us-west-2.compute.internal
-  uid: ip-172-20-46-143.us-west-2.compute.internal
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-46-143.us-west-2.compute.internal
 type: Normal

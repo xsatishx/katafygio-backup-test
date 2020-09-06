@@ -1,12 +1,14 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:42:56Z"
-deprecatedLastTimestamp: "2020-09-06T09:42:56Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-46-143.us-west-2.compute.internal
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:42:56Z"
+involvedObject:
+  kind: Node
+  name: ip-172-20-46-143.us-west-2.compute.internal
+  uid: ip-172-20-46-143.us-west-2.compute.internal
 kind: Event
+lastTimestamp: "2020-09-06T09:42:56Z"
+message: Updated Node Allocatable limit across pods
 metadata:
   creationTimestamp: "2020-09-06T09:47:08Z"
   managedFields:
@@ -31,10 +33,10 @@ metadata:
     time: "2020-09-06T09:47:08Z"
   name: ip-172-20-46-143.us-west-2.compute.internal.16322886aa637b50
   namespace: default
-note: Updated Node Allocatable limit across pods
 reason: NodeAllocatableEnforced
-regarding:
-  kind: Node
-  name: ip-172-20-46-143.us-west-2.compute.internal
-  uid: ip-172-20-46-143.us-west-2.compute.internal
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-46-143.us-west-2.compute.internal
 type: Normal

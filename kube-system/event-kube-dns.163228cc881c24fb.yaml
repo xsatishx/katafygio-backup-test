@@ -1,11 +1,19 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:47:56Z"
-deprecatedLastTimestamp: "2020-09-06T09:47:56Z"
-deprecatedSource:
-  component: endpoint-controller
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:47:56Z"
+involvedObject:
+  apiVersion: v1
+  kind: Endpoints
+  name: kube-dns
+  namespace: kube-system
+  resourceVersion: "311"
+  uid: 4600d5e9-ee14-4c23-8bd8-2babba9f5226
 kind: Event
+lastTimestamp: "2020-09-06T09:47:56Z"
+message: 'Failed to update endpoint kube-system/kube-dns: Operation cannot be fulfilled
+  on endpoints "kube-dns": the object has been modified; please apply your changes
+  to the latest version and try again'
 metadata:
   creationTimestamp: "2020-09-06T09:47:56Z"
   managedFields:
@@ -32,15 +40,9 @@ metadata:
     time: "2020-09-06T09:47:56Z"
   name: kube-dns.163228cc881c24fb
   namespace: kube-system
-note: 'Failed to update endpoint kube-system/kube-dns: Operation cannot be fulfilled
-  on endpoints "kube-dns": the object has been modified; please apply your changes
-  to the latest version and try again'
 reason: FailedToUpdateEndpoint
-regarding:
-  apiVersion: v1
-  kind: Endpoints
-  name: kube-dns
-  namespace: kube-system
-  resourceVersion: "311"
-  uid: 4600d5e9-ee14-4c23-8bd8-2babba9f5226
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: endpoint-controller
 type: Warning

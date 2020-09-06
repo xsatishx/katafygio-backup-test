@@ -1,12 +1,18 @@
-apiVersion: events.k8s.io/v1beta1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2020-09-06T09:47:54Z"
-deprecatedLastTimestamp: "2020-09-06T09:47:54Z"
-deprecatedSource:
-  component: kubelet
-  host: ip-172-20-46-143.us-west-2.compute.internal
+apiVersion: v1
+count: 1
 eventTime: null
+firstTimestamp: "2020-09-06T09:47:54Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{sidecar}
+  kind: Pod
+  name: kube-dns-64f86fb8dd-7gxnf
+  namespace: kube-system
+  resourceVersion: "697"
+  uid: 1b2f7e51-b4db-43c0-a859-30edc3927b8e
 kind: Event
+lastTimestamp: "2020-09-06T09:47:54Z"
+message: Pulling image "k8s.gcr.io/k8s-dns-sidecar:1.15.13"
 metadata:
   creationTimestamp: "2020-09-06T09:47:54Z"
   managedFields:
@@ -35,14 +41,10 @@ metadata:
     time: "2020-09-06T09:47:54Z"
   name: kube-dns-64f86fb8dd-7gxnf.163228cc0575537f
   namespace: kube-system
-note: Pulling image "k8s.gcr.io/k8s-dns-sidecar:1.15.13"
 reason: Pulling
-regarding:
-  apiVersion: v1
-  fieldPath: spec.containers{sidecar}
-  kind: Pod
-  name: kube-dns-64f86fb8dd-7gxnf
-  namespace: kube-system
-  resourceVersion: "697"
-  uid: 1b2f7e51-b4db-43c0-a859-30edc3927b8e
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: ip-172-20-46-143.us-west-2.compute.internal
 type: Normal
